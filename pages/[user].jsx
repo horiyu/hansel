@@ -43,7 +43,7 @@ import styled from 'styled-components'
   }
 
   handleDelete = (id) => {
-    console.log(id)
+    // console.log(id)
     db.collection(`${ firebase.auth().currentUser.uid }`).doc(id).delete().then(() => {
       console.log("Document successfully deleted!");
     }).catch((error) => {
