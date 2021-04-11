@@ -15,7 +15,7 @@ export default function Header () {
       </Logo>
       <HeaderLeft>
         <ul>
-          <li>
+          {/* <li>
             <Link href='/'>
               <a>ヘンゼルとは</a>
             </Link>
@@ -24,7 +24,7 @@ export default function Header () {
             <Link href='/'>
               <a>ヘンゼルをはじめる</a>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </HeaderLeft>
       <HeaderRight>
@@ -66,10 +66,10 @@ const HeaderRoot = styled.header`
 
 const Logo = styled.h1`
   margin: 0;
-  margin-right: 30px;
+  /* margin-right: 30px; */
   margin-left: 50px;
   & img {
-    height: 35px;
+    height: 30px;
   }
 `;
 
