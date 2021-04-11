@@ -4,7 +4,7 @@ import { firebase } from '../firebase'
 function checkAuth () {
 
   var user = firebase.auth().currentUser;
-
+  console.log(user);
   if ( user ) {
     return true
   } else {
