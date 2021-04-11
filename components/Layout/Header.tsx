@@ -14,7 +14,7 @@ export default function Header () {
         </Link>
       </Logo>
       <HeaderLeft>
-        <ul>
+        {/* <ul>
           <li>
             <Link href='/'>
               <a>ヘンゼルとは</a>
@@ -25,14 +25,19 @@ export default function Header () {
               <a>ヘンゼルをはじめる</a>
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </HeaderLeft>
       <HeaderRight>
 
         { checkAuth ? (
           <>
             {/* <p>{ checkAuth }</p> */}
-            <Materialicon className = 'outlined' name = 'notifications' />
+            <Link href='/news'>
+              <a>
+                <Materialicon className = 'outlined' name = 'notifications'/>
+                <NotificationsActive>1</NotificationsActive>
+              </a>
+            </Link>
             {/* <Materialicon className = 'outlined' name = 'notifications_active' /> */}
             <AccountButton/>
           </>
@@ -62,6 +67,9 @@ const HeaderRoot = styled.header`
   height: 70px;
   box-shadow: rgb(0 0 0 / 18%) 0px 2px 4px;
   align-items: center;
+  & * {
+    color: #000;
+  }
 `;
 
 const Logo = styled.h1`
@@ -69,7 +77,8 @@ const Logo = styled.h1`
   margin-right: 30px;
   margin-left: 50px;
   & img {
-    height: 35px;
+    height: 30px;
+    width: auto;
   }
 `;
 
@@ -90,4 +99,25 @@ const HeaderRight = styled.nav`
   & > * {
     margin-left: 40px;
   }
+  & a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  & span {
+    font-size: 30px;
+  }
+`;
+
+const NotificationsActive = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  height: 23px;
+  width: 23px;
+  color: #fff;
+  background-color: #c33;
+  border: solid 3px #fff;
+  border-radius: 50%;
+  z-index: 10;
 `;

@@ -11,9 +11,9 @@ const listAbout: ListsProps[] = [
 
 const listHelp: ListsProps[] = [
   { id: 100, link: '/help', name: "ヘルプ一覧" },
-  { id: 200, link: '/about', name: "ご利用ガイド" },
-  { id: 300, link: '/about', name: "よくあるご質問" },
-  { id: 400, link: '/about', name: "お問い合わせ" },
+  { id: 200, link: '/help/guide', name: "ご利用ガイド" },
+  { id: 300, link: '/help/faq', name: "よくあるご質問" },
+  { id: 400, link: '/help/contact', name: "お問い合わせ" },
   { id: 500, link: '/', name: "引用元の方" },
 ];
 
@@ -78,8 +78,9 @@ const Copyright = styled.div`
   margin-top: 40px;
   text-align: center;
   & img {
-  margin: auto;
+    margin: auto;
     height: 30px;
+    width: auto;
   }
 `;
 

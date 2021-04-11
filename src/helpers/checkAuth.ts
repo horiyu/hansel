@@ -5,10 +5,11 @@ function checkAuth () {
 
   var user = firebase.auth().currentUser;
 
+  console.log(user);
   if ( user ) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
   // var authUser = auth.currentUser;
   // auth.onAuthStateChanged(authUser => {
